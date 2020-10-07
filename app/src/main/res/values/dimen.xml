@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="low_margin">8dp</dimen>
+    <dimen name="medium_margin1">12dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="large_margin">32dp</dimen>
+    <dimen name="extra_large_margin">64dp</dimen>
+
+    <dimen name="low_font_size">12sp</dimen>
+
+    <dimen name="icon_size_recycler">28dp</dimen>
+    <dimen name="ic_option_size1">50dp</dimen>
+
+    <dimen name="ic_option_size2">80dp</dimen>
+    <dimen name="ic_option_size3">45dp</dimen>
+    <dimen name="ic_option_size">50dp</dimen>
+
+
+    <dimen name="medium_font_size">16sp</dimen>
+    <dimen name="medium_font_size18">18sp</dimen>
+    <dimen name="medium_font_size20">20sp</dimen>
+    <dimen name="Medium2_font_size">24sp</dimen>
+    <dimen name="large_font_size">32sp</dimen>
+
+
+    <dimen name="radius_card">10dp</dimen>
+    <dimen name="linear_margin">32dp</dimen>
+    <dimen name="radius_textview">32dp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">8sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">9sp</dimen>
+</resources>

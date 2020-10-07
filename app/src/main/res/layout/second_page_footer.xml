@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rect_radius"
+    android:elevation="@dimen/large_margin"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/large_margin"
+    app:elevation="@dimen/large_margin">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/img_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:id="@+id/main_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/ic_option_size2"
+            android:layout_height="@dimen/ic_option_size2"
+            android:src="@drawable/profile_thumb" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/low_margin"
+            android:layout_marginLeft="@dimen/low_margin"
+
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_weight=".5"
+            android:orientation="vertical">
+
+            <com.example.myapplication.view.YEKANRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/low_margin"
+                android:gravity="left"
+                android:text="@string/user_name"
+                android:textColor="@color/titleBlue"
+                android:textSize="@dimen/medium_font_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colordesc" />
+
+            <com.example.myapplication.view.YEKANRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+
+                android:text="@string/moshaver"
+                android:textColor="@color/colordesc"
+                android:textSize="@dimen/low_font_size"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/low_margin"
+            android:layout_weight=".5"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/blue_phone"
+                android:layout_width="@dimen/ic_option_size"
+                android:layout_height="@dimen/ic_option_size"
+                android:padding="@dimen/low_margin"
+                android:src="@drawable/ic_blue_phone" />
+
+            <com.example.myapplication.view.YEKANRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/phone"
+                android:textColor="@color/colordesc"
+                android:textSize="@dimen/low_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/low_margin"
+            android:layout_weight=".5"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/whatsapp"
+                android:layout_width="@dimen/ic_option_size"
+                android:layout_height="@dimen/ic_option_size"
+                android:padding="@dimen/low_margin"
+                android:src="@drawable/ic_whatsapp" />
+
+            <com.example.myapplication.view.YEKANRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="@string/whatsapp"
+                android:textColor="@color/colordesc"
+                android:textSize="@dimen/low_font_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin">
+
+        <LinearLayout
+            android:id="@+id/eq_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+               android:layout_weight=".75"
+                android:background="@color/colordesc" />
+
+            <com.example.myapplication.view.YEKANBoldTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+           android:layout_weight=".25"
+                android:text="@string/equipment"
+                android:textColor="@color/titleBlue"
+                android:textSize="@dimen/medium_font_size" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_property"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eq_linear"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_gravity="right"
+            android:gravity="right"
+            app:layoutManager=".view.RtlGridLayoutManager"
+            app:spanCount="3" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@color/colordesc" />
+
+        <com.example.myapplication.view.YEKANBoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_font_size"
+            android:layout_weight=".4"
+            android:text="@string/description"
+            android:textColor="@color/titleBlue" />
+
+        <com.example.myapplication.view.YEKANRegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/low_margin"
+            android:text="@string/descriptionText"
+            android:textSize="@dimen/low_font_size"
+
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+
+            android:backgroundTint="@color/titleBlue"
+
+            android:src="@drawable/ic_up_arrow"
+            app:fabSize="normal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

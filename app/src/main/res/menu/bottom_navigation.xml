@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/title_phone"
+        android:icon="@drawable/ic_phone"
+        android:title="@string/title_phone" />
+
+    <item
+        android:id="@+id/title_profile"
+        android:icon="@drawable/ic_group"
+
+        android:title="@string/title_profile" />
+
+
+    <item
+        android:id="@+id/title_add_request"
+        android:icon="@drawable/ic_amount"
+
+        android:title="@string/title_add_request" />
+
+    <item
+        android:id="@+id/title_submit_request"
+        android:icon="@drawable/ic_amount__s"
+
+        android:title="@string/title_submit_request" />
+
+</menu>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgrondMain"
+    tools:context=".MainActivity"
+    android:focusable="true"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/coordinator">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/ad_btn"
+                    android:layout_width="@dimen/ic_option_size1"
+                    android:layout_height="@dimen/ic_option_size1"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_location"
+
+                    />
+
+                <com.example.myapplication.view.IRANSansRegularTextView
+
+                    android:id="@+id/title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/city"
+                    android:textColor="@color/TitleNameWhite"
+                    android:textSize="@dimen/medium_font_size18" />
+
+                <ImageView
+
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/title_txt"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <ImageView
+
+                    android:layout_width="@dimen/ic_option_size1"
+                    android:layout_height="@dimen/ic_option_size1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_more_horizotnal" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:scrollbars="none">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/search_bar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/low_margin"
+                    android:layout_marginRight="@dimen/low_margin"
+                    android:layout_marginBottom="@dimen/low_margin"
+                    android:orientation="horizontal"
+
+
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/shape_round_search"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/low_margin"
+                        android:weightSum="2"
+                        android:layout_marginEnd="@dimen/low_margin">
+
+                        <ImageView
+                            android:id="@+id/search_btn"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:padding="12dp"
+                            android:src="@drawable/ic_searchicon" />
+
+
+
+                        <com.example.myapplication.view.IRANYekanEditText
+                            android:id="@+id/search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:gravity="left|center"
+                            android:hint="@string/search"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+
+                            android:textColor="@color/colordesc"
+                            android:textColorHint="@color/colordesc"
+                            android:textSize="@dimen/low_font_size" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/ic_option_size"
+                        android:layout_gravity="center_vertical"
+
+
+                        android:layout_weight=".5"
+                        android:src="@drawable/ic_option" />
+                </LinearLayout>
+
+                <!--        <androidx.recyclerview.widget.RecyclerView-->
+                <!--            android:id="@+id/recycler_main"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_below="@+id/search_bar_layout"-->
+                <!--            android:layout_centerInParent="true"-->
+                <!--            android:layout_marginLeft="@dimen/medium_margin"-->
+                <!--            android:layout_marginRight="@dimen/medium_margin" />-->
+
+
+                <include
+                    android:id="@+id/include1"
+                    layout="@layout/main_recycler_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/search_bar_layout"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:layout_marginRight="@dimen/medium_margin" />
+
+                <include
+                    android:id="@+id/include2"
+                    layout="@layout/main_recycler_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/include1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/low_margin"
+                    android:layout_marginRight="@dimen/medium_margin" />
+
+                <include
+                    android:id="@+id/include3"
+                    layout="@layout/main_recycler_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/include2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/low_margin"
+                    android:layout_marginRight="@dimen/medium_margin" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/medium_margin"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_sort_ascending"
+            app:fabSize="normal"
+            app:layout_anchor="@+id/scrollable" />
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/backgrondMain"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_vertical"
+                android:background="@color/white"
+                android:clickable="true"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:outlineAmbientShadowColor="@color/colorControlHighlight"
+                android:theme="@style/Widget.BottomNavigationView14"
+                app:elevation="0dp"
+                app:itemIconTint="@color/bottom_nav_color"
+                app:itemRippleColor="@color/colorControlHighlight"
+                app:itemTextColor="@color/bottom_nav_color"
+                app:labelVisibilityMode="labeled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:menu="@menu/bottom_navigation" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/low_margin"
+                android:backgroundTint="@color/white"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:src="@drawable/ic_heart"
+                android:translationZ="90dp"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:layout_anchor="@+id/navigation"
+                app:layout_constraintBottom_toTopOf="@id/navigation"
+                app:layout_constraintLeft_toRightOf="@id/navigation"
+                app:layout_constraintRight_toLeftOf="@id/navigation"
+                app:layout_constraintTop_toBottomOf="@id/navigation"
+                app:layout_constraintTop_toTopOf="@id/navigation"
+                app:rippleColor="@color/white"
+
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

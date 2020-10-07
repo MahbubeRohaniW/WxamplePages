@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#04724D</color>
+    <color name="colorPrimaryDark">#02442E</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colordesc">#B2B2B2</color>
+    <color name="TitleNameWhite">#ffffff</color>
+    <color name="TitleGreen">#04724D</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="shadow">#80000000</color>
+    <color name="backgrondMain">#f1f8ff</color>
+    <color name="titleBlue">#0077FF</color>
+    <color name="colorControlHighlight">#00ffffff</color>
+</resources>

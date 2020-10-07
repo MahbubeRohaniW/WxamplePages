@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_sample"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/gradient"
+        />
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/large_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/main_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.example.myapplication.view.YEKANRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/low_margin"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/low_margin"
+                    android:paddingLeft="@dimen/low_margin"
+                    android:text="@string/price"
+                    android:textColor="@color/white"
+
+                    android:textSize="@dimen/medium_font_size20" />
+
+                <com.example.myapplication.view.YEKANRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/low_margin"
+                    android:text="@string/address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/low_font_size"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/low_margin"
+                android:layout_weight=".5"
+                android:gravity="right|bottom"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_option_size3"
+                    android:layout_height="@dimen/ic_option_size3"
+                    android:layout_marginEnd="@dimen/low_margin"
+                    android:layout_marginRight="@dimen/low_margin"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_share" />
+
+                <ImageView
+                    android:layout_width="@dimen/ic_option_size3"
+                    android:layout_height="@dimen/ic_option_size3"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_disable_heart_" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/main_linear"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginBottom="@dimen/low_margin"
+
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.example.myapplication.view.IRANSansRegularTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:drawableEnd="@drawable/ic_white_house"
+                android:drawableRight="@drawable/ic_white_house"
+                android:drawablePadding="@dimen/low_margin"
+                android:text="@string/home_area"
+                android:textColor="@color/white" />
+
+
+            <com.example.myapplication.view.IRANSansRegularTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_white_investment"
+                android:drawableRight="@drawable/ic_white_investment"
+                android:drawablePadding="@dimen/low_margin"
+                android:text="@string/selected_floor"
+                android:textColor="@color/white" />
+
+            <com.example.myapplication.view.IRANSansRegularTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_duplex"
+                android:drawableRight="@drawable/ic_duplex"
+                android:drawablePadding="@dimen/low_margin"
+                android:text="@string/duplex"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear1"
+            android:gravity="left"
+
+            android:orientation="horizontal"
+
+            android:weightSum="3">
+
+            <com.example.myapplication.view.IRANSansRegularTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_hammer"
+                android:drawableRight="@drawable/ic_hammer"
+                android:drawablePadding="@dimen/low_margin"
+                android:text="@string/hummer"
+                android:textColor="@color/white" />
+
+            <com.example.myapplication.view.IRANSansRegularTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_white_bed"
+                android:drawableRight="@drawable/ic_white_bed"
+                android:drawablePadding="@dimen/low_margin"
+                android:text="@string/selected_room"
+                android:textColor="@color/white" />
+
+            <com.example.myapplication.view.IRANSansRegularTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_contract"
+                android:drawableRight="@drawable/ic_contract"
+                android:drawablePadding="@dimen/low_margin"
+                android:text="@string/contract"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

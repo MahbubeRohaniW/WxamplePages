@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">مالیما</string>
+    <string name="rooms">خواب</string>
+    <string name="floors">طبقه</string>
+    <string name="area">متراژ</string>
+
+    <string name="type">ویلایی</string>
+    <string name="position">اکازیون</string>
+
+
+    <string name="title_phone">پشتیبانی</string>
+    <string name="title_add_request">ثبت تقاضا</string>
+    <string name="title_submit_request">ثبت ملک</string>
+    <string name="title_profile">مشاوران املاک</string>
+
+    // SAMPLE
+    <string name="price">2.500.000.000</string>
+    <string name="address">بجنورد-طالقانی شرقی</string>
+    <string name="city">بجنورد </string>
+
+    <string name="search">آدرس را جستجو کنید</string>
+    
+    //options
+    <string name="duplex">آپارتمان</string>
+    <string name="selected_floor">طبقه3</string>
+    <string name="home_area">180متر</string>
+    <string name="selected_room">3خوابه</string>
+    <string name="contract">سند ملکی</string>
+    <string name="hummer">6دنگ</string>
+
+    <string name="whatsapp">واتس اپ</string>
+    <string name="phone">تماس</string>
+
+    <string name="equipment">امکانات</string>
+    <string name="description">توضیحات</string>
+
+    <string name="user_name">محمود قاسمی</string>
+
+    <string name="moshaver">مشاور املاک آسمان</string>
+
+    <string name="evaltor">آسانسور</string>
+    <string name="descriptionText">
+        ۴۸۰ متر مربع دارای دو سند شش دانگ مناسب برای سرمایه‌گذاری یا ساخت که بهش ۱۲ واحد پروانه میدن با این قیمت هیچ جای بجنورد زمین پیدا نمیشه ۴۸۰ متر مربع دارای دو سند شش دانگ مناسب برای سرمایه‌گذاری یا ساخت که بهش ۱۲ واحد پروانه میدن با این قیمت هیچ جای بجنورد زمین پیدا نمیشه
+    </string>
+
+
+
+</resources>
